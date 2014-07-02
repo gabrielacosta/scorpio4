@@ -4,16 +4,10 @@
                              http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>scorpio4</groupId>
+    <groupId>com.scorpio4</groupId>
     <artifactId>scorpio4master</artifactId>
     <version>0.03-SNAPSHOT</version>
     <packaging>pom</packaging>
-
-    <name>Scorpio4 Master</name>
-    <organization>
-        <name>Fact:Core</name>
-    </organization>
-    <url>http://www.com.factcore.com</url>
 
     <modules>
         <module>../scorpio4core</module>
@@ -22,6 +16,38 @@
         <module>../scorpio4runtime</module>
         <module>../scorpio4demo</module>
     </modules>
+
+    <name>Scorpio4 Master</name>
+    <organization>
+        <name>Fact:Core</name>
+    </organization>
+    <url>http://www.scorpio4.com</url>
+
+    <developers>
+        <developer>
+            <id>lee</id>
+            <name>Lee Curtis</name>
+            <email>lee.curtis@me.com</email>
+            <organization>Troven / Fact:Core</organization>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+            <timezone>+11</timezone>
+        </developer>
+    </developers>
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>://github.com/troven/scorpio4master.git</url>
+        <connection>scm:git:https://github.com/troven/scorpio4master.git</connection>
+    </scm>
 
     <properties>
 
@@ -57,21 +83,6 @@
 
 
     </properties>
-
-
-    <developers>
-        <developer>
-            <id>lee</id>
-            <name>Lee Curtis</name>
-            <email>lee.curtis@me.com</email>
-            <organization>Troven / Fact:Core</organization>
-            <roles>
-                <role>architect</role>
-                <role>developer</role>
-            </roles>
-            <timezone>+11</timezone>
-        </developer>
-    </developers>
 
     <build>
         <pluginManagement>
