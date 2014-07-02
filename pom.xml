@@ -38,6 +38,21 @@
             <timezone>+11</timezone>
         </developer>
     </developers>
+
+    <contributors>
+        <contributor>
+            <name>Matthew Simcock</name>
+            <organization>Matthew Simcock</organization>
+            <organizationUrl>http://scorpio4.com/matthew/</organizationUrl>
+            <roles>
+                <role>designer</role>
+                <role>tester</role>
+                <role>documentation</role>
+            </roles>
+            <timezone>Australia/Sydney</timezone>
+        </contributor>
+    </contributors>
+
     <licenses>
         <license>
             <name>Apache License 2.0</name>
@@ -47,7 +62,7 @@
     </licenses>
 
     <scm>
-        <url>://github.com/troven/scorpio4master.git</url>
+        <url>github.com/troven/scorpio4master.git</url>
         <connection>scm:git:https://github.com/troven/scorpio4master.git</connection>
     </scm>
 
