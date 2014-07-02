@@ -1,22 +1,19 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                              http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.scorpio4</groupId>
     <artifactId>scorpio4master</artifactId>
     <version>0.03-SNAPSHOT</version>
     <packaging>pom</packaging>
-
+<!--
     <modules>
-        <module>../scorpio4core</module>
-        <module>../scorpio4rdf</module>
-        <module>../scorpio4dba</module>
-        <module>../scorpio4runtime</module>
-        <module>../scorpio4demo</module>
+        <module>scorpio4core</module>
+        <module>scorpio4rdf</module>
+        <module>scorpio4dba</module>
+        <module>scorpio4runtime</module>
+        <module>scorpio4demo</module>
     </modules>
-
+-->
     <name>Scorpio4 Master</name>
     <url>http://www.scorpio4.com</url>
 
@@ -106,7 +103,7 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <configuration>
                         <source>1.7</source>
-                        <target>1.7pro</target>
+                        <target>1.7</target>
                     </configuration>
                 </plugin>
             </plugins>
