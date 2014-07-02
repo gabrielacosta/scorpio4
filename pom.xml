@@ -1,0 +1,99 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>scorpio4</groupId>
+    <artifactId>scorpio4master</artifactId>
+    <version>0.03-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Scorpio4 Master</name>
+    <organization>
+        <name>Fact:Core</name>
+    </organization>
+    <url>http://www.com.factcore.com</url>
+
+    <modules>
+        <module>../scorpio4core</module>
+        <module>../scorpio4rdf</module>
+        <module>../scorpio4dba</module>
+        <module>../scorpio4runtime</module>
+        <module>../scorpio4demo</module>
+    </modules>
+
+    <properties>
+
+        <factcore.id>urn:${project.name}:</factcore.id>
+        <factcore.src.path>src/main/resources/factcore/</factcore.src.path>
+        <factcore.resources.path>src/main/resources/factcore/</factcore.resources.path>
+        <factcore.target.path>build/target/</factcore.target.path>
+        <factcore.temp.path>build/temp/</factcore.temp.path>
+
+        <factcore.upload.host>http://127.0.0.1:8080/openrdf-sesame/</factcore.upload.host>
+        <factcore.upload.name>FactTools</factcore.upload.name>
+
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.directory>deploy</project.build.directory>
+        <project.webapp.directory>src/main/resources/www/</project.webapp.directory>
+
+        <!-- dependency versions -->
+        <winstone.version>1.0.4</winstone.version>
+        <spring.version>3.1.2.RELEASE</spring.version>
+        <slf4j.version>1.6.6</slf4j.version>
+        <sesame.version>2.7.11</sesame.version>
+        <camel.version>2.13.1</camel.version>
+        <lucene.version>4.5.0</lucene.version>
+        <stanbol.version>0.10.0</stanbol.version>
+        <james.version>3.0-M2</james.version>
+        <vaadin.version>7.1.8</vaadin.version>
+
+        <groovy.version>2.0.1</groovy.version>
+        <groovy-eclipse-compiler.version>2.8.0-01</groovy-eclipse-compiler.version>
+        <groovy-eclipse-batch.version>2.1.8-01</groovy-eclipse-batch.version>
+
+
+
+    </properties>
+
+
+    <developers>
+        <developer>
+            <id>lee</id>
+            <name>Lee Curtis</name>
+            <email>lee.curtis@me.com</email>
+            <organization>Troven / Fact:Core</organization>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+            <timezone>+11</timezone>
+        </developer>
+    </developers>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.5</source>
+                        <target>1.5</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
