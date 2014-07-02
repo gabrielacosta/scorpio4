@@ -1,0 +1,111 @@
+package com.factcore.vui.ux.data;
+
+import com.factcore.iq.IQ;
+import com.factcore.vendor.vaadin.ui.Examples;
+import com.factcore.vui.ux.base.BaseUX;
+import com.vaadin.data.Container;
+import com.vaadin.data.Item;
+import com.vaadin.ui.Component;
+import org.vaadin.chronographer.ChronoGrapher;
+import org.vaadin.chronographer.gwt.client.model.TimeUnit;
+import org.vaadin.chronographer.gwt.client.model.TimelineBandInfo;
+import org.vaadin.chronographer.gwt.client.model.TimelineEvent;
+import org.vaadin.chronographer.gwt.client.model.TimelineZone;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+/**
+ * Fact:Core (c) 2013
+ * Module: com.factcore.vui.ux.data
+ * User  : lee
+ * Date  : 28/01/2014
+ * Time  : 4:43 PM
+ */
+public class TimelineUX extends BaseUX implements Examples {
+    private final DateFormat df = new SimpleDateFormat("yyyy");
+    ChronoGrapher timeline = new ChronoGrapher();
+
+    public TimelineUX(IQ iq) throws ParseException {
+        init(iq);
+        build();
+    }
+
+    private void build() throws ParseException {
+        timeline.setId(getIdentity());
+        timeline.setImmediate(true);
+        timeline.setWidth("100%");
+        timeline.setHeight("100px");
+
+        TimelineZone zone = new TimelineZone();
+
+        zone.setStart(df.parse("1917"));
+        zone.setEnd(df.parse("1920"));
+
+        zone.setUnit(TimeUnit.WEEK);
+        zone.setMultiple(1);
+        zone.setMagnify(10);
+
+        TimelineBandInfo bandInfo = new TimelineBandInfo();
+        bandInfo.setDate(df.parse("2013"));
+        bandInfo.setTimeZone(+2);
+        bandInfo.setWidth("100%");
+        bandInfo.setIntervalUnit(TimeUnit.YEAR);
+        bandInfo.setIntervalPixels(35);
+        bandInfo.addTimelineZone(zone);
+
+
+        timeline.addBandInfo(bandInfo);
+        examples();
+        setComponent(timeline);
+        bind();
+    }
+
+    public Component examples() {
+        timeline.clearEvents();
+        Date startDate= null, endDate = null;
+        for(int i=0;i<20;i++) {
+            startDate = new Date(System.currentTimeMillis()-(i*1000000));
+            endDate = new Date(System.currentTimeMillis()-(i*1001000));
+            TimelineEvent timelineEvent = addEvent(startDate, endDate, "Event #" + i, "", "#FF00FF");
+            timeline.addEvent(timelineEvent, true);
+        }
+        return timeline;
+    }
+
+
+    @Override
+    public Container setContainer(Container model) {
+        super.setContainer(model);
+        int i = 0;
+        timeline.clearEvents();
+        for(Object id: model.getItemIds()) {
+            Item item = model.getItem(id);
+            if (item!=null) {
+                Date startDate = new Date(item.getItemProperty("start").getValue().toString());
+                Date endDate = new Date(item.getItemProperty("end").getValue().toString());
+                String caption = item.getItemProperty("label").getValue().toString();
+                String body = "";
+                String color = "#FF00FF";
+                TimelineEvent timelineEvent = addEvent(startDate, endDate, caption, body, color);
+                timeline.addEvent(timelineEvent, true);
+                timelineEvent.setId(i++);
+            }
+        }
+        return model;
+    }
+
+    private TimelineEvent addEvent(Date start, Date end, String title, String body, String color) {
+        TimelineEvent event = new TimelineEvent();
+        event.setIsDuration(true);
+        event.setStart(start);
+        event.setEnd(end);
+        event.setTitle(title);
+        event.setColor(color);
+        event.setBody(body);
+        return event;
+    }
+
+}

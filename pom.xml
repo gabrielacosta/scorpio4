@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.scorpio4</groupId>
-    <artifactId>scorpio4master</artifactId>
+    <artifactId>scorpio4</artifactId>
     <version>0.04-SNAPSHOT</version>
     <packaging>pom</packaging>
 <!--
