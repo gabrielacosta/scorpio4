@@ -21,8 +21,8 @@
     <url>http://www.scorpio4.com</url>
 
     <organization>
-        <name>Fact:Core</name>
-        <url>http://www.factcore.com/scorpio4/</url>
+        <name>Scorpio4</name>
+        <url>http://www.scorpio4.com/scorpio4/</url>
     </organization>
 
     <developers>
@@ -30,7 +30,7 @@
             <id>lee</id>
             <name>Lee Curtis</name>
             <email>lee.curtis@me.com</email>
-            <organization>Troven / Fact:Core</organization>
+            <organization>Troven / Scorpio4</organization>
             <roles>
                 <role>architect</role>
                 <role>developer</role>
@@ -69,8 +69,8 @@
     <properties>
 
         <scorpio4.id>urn:${project.name}:</scorpio4.id>
-        <scorpio4.src.path>src/main/resources/factcore/</scorpio4.src.path>
-        <scorpio4.resources.path>src/main/resources/factcore/</scorpio4.resources.path>
+        <scorpio4.src.path>src/main/resources/scorpio4/</scorpio4.src.path>
+        <scorpio4.resources.path>src/main/resources/scorpio4/</scorpio4.resources.path>
         <scorpio4.target.path>build/target/</scorpio4.target.path>
         <scorpio4.temp.path>build/temp/</scorpio4.temp.path>
 

@@ -1,0 +1,27 @@
+<project>
+
+    <bannerLeft>
+        <name>Scorpio4</name>
+        <src>http://www.scorpio4.com/images/logo.png</src>
+        <href>http://www.scorpio4.com/</href>
+    </bannerLeft>
+
+    <bannerRight>
+        <src>http://maven.apache.org/images/maven-logo-2.gif</src>
+    </bannerRight>
+
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.3.0</version>
+    </skin>
+
+    <poweredBy>
+        <logo name="Maven" href="http://maven.apache.org/" img="http://maven.apache.org/images/logos/maven-feather.png"/>
+        <logo name="Scorpio4" href="http://www.Scorpio4.com/" img="http://www.Scorpio4.com/images/logo.png"/>
+        <logo name="OpenRDF Sesame" href="http://www.Scorpio4.com/" img="http://www.Scorpio4.com/images/logo.png"/>
+        <logo name="Spring" href="http://www.Scorpio4.com/" img="http://www.Scorpio4.com/images/logo.png"/>
+        <logo name="Apache Camel" href="http://www.Scorpio4.com/" img="http://www.Scorpio4.com/images/logo.png"/>
+    </poweredBy>
+
+</project>
