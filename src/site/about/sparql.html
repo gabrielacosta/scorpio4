@@ -1,0 +1,24 @@
+<div>
+    <h2>SPARQL Rules</h2>
+    <p>SPARQL is the query language for the semantic web. It allows a construct query to follow relationships to locate, constrain and retrieve a data model.</p>
+    <p>SPARQL Rules use the CONSTRUCT query form to infer a new set of facts from an existing set. This is a subtle, powerful technique that Scorpio<sup>4</sup> seeks to fully explore, facilitate and exploit.</p>
+    <p>For example:
+    <pre>
+    Take a schema of SQL tables. Each table has columns that represent our data, along with some information about their data type .
+    We want to generate a data entry Form to capture and validate each field.
+    We create a SPARQL query that takes each column in the table and generates a corresponding Form Field.
+    Default validation is applied based on the SQL data type.
+    Each UI field is related to it's data field, and that relationship is explicitly stated.
+    In this way, a single query can transform a SQL schema (Model) into a View definition.
+    </pre>
+    </p>
+    <p>Doing so, means that the UI is always in lock-step with the data model, and their relationships can be interrogated (by SPARQL) at design-time or at runtime.</p>
+
+    Some Use Cases
+    <ul>
+        <li>copy existing facts from one repository to another</li>
+        <li>derive new facts from existing facts</li>
+        <li>convert data from one vocabulary to another</li>
+        <li>identify data that does not conform</li>
+    </ul>
+</div>

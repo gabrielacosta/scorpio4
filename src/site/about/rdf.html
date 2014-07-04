@@ -1,0 +1,42 @@
+<div>
+    <h2>Scorpio<sup>4</sup> RDF</h2>
+    <p>We want to avoid ambiguity when sharing and consuming data. One solution is to use a URI as an identifier.</p>
+    <p>If two or more parties use the same identifier, they readily agree they are talking about the same thing.</p>
+    <p>RDF is a data modelling language that uses URIs to describe everything.</p>
+    <p>It's schema language, RDFS is used to construct vocabularies where all the terms are defined by URIs.</p>
+    <p>The definition of each URI can usually be found by issuing an HTTP request for the URI. </p>
+    <p>This decentralised, self-referencing, self-describing, ad-hoc data model is the chosen data model for the semantic web and linked data.</p>
+    <p>It was designed to allow computers to produce and consume data without significant human intervention.</p>
+    <p>RDF uses URIs so that a computer can potentially discover the meaning of any identifier, making RDF an ideal choice for interoperability and API-as-a-service based solutions.</p>
+    <p>We hope that Scorpio<sup>4</sup> plays a small role in promoting the myriad of use cases that Linked Data enables and simplies.</p>
+
+    <h3>Scorpio<sup>4</sup> Facts vs RDF</h3>
+    <p>To keep things simple, we adopt the terms 'hard facts' and 'literal facts'.</p>
+    <p>In all cases, facts are simply RDF triples that omit some of nuances for sake of clarity when talking to non-geeks.</p>
+
+    <h3>Hard Facts</h3>
+    <p>A "Hard Fact" is a simple statement comprised of 3 distinct URIs - a subject and it's relationship (predicate) to an object.</p>
+    <pre> :Lee :drinks :Black_Coffee.</pre>
+
+    <h3>Literal Facts</h3>
+    <p>A "Literal Fact" is a simple statement comprised of 2 distinct URIs - a subject and it's relationship (predicate) to a literal.</p>
+    <pre> :Lee :first_name  "Lee"^^xsd:string.</pre>
+    <p>Where we have declared that resource :Lee has a XSD-string encoded literal as his :first_name</p>
+
+    <h3>Inferencing</h3>
+    <p>If you think about relationships, they tell you a lot about the two parties. In other words, we can make inferences about the subjects and objects by referencing the predicate.</p>
+    <p>We like to think of it as data-driven common sense.</p>
+
+    <h3>Linked Data</h3>
+    <p>Each atomic element of the statement is actually a URI - a globally unique identifier just like a web page. In fact some web pages already support embedded RDF.</p>
+    <pre>http://example.org/whatis/Black_Coffee</pre>
+    <p>Since each URI is globally addressable, it's possible to request more RDF that further expands the definition of :BlackCofee - perhaps that is suppliers, recipes or health related</p>
+    <p>From the RDF that the Black_Coffee site provides about it's beverage, we find more statements. We can continue like this until all the world's <i>relevant</i> linked data is consumed.</p>
+    <p>It's the links that matter. Those relationships provide meaning - hence the semantic web. Since all data can theoretically be called upon to explain itself, it makes for a very powerful knowledge management framework.</p>
+
+    <h3>To Schema or Not Schema</h3>
+    <p>A schema in SQL is a set of constraints that are imposed on the structure of the data. With RDF, a schema is a logical set of rules that infer further facts.</p>
+    <p>Furthermore, the data and meta-data are indistinguishable - all the tools and techniques that work with data also apply to meta-data.</p>
+    <p>RDF is flexible and simple enough that it can describe queries, data models, user interfaces, validation rules, business processes, integration patterns and more.</p>
+    <p>Scorpio<sup>4</sup> take those possibilities and provides the infrastructure and tooling needed to design, test, deliver, deploy and maintain sophisticated systems that rely upon smart data rather than smart code.</p>
+</div>

@@ -1,0 +1,32 @@
+<div>
+    <h2>Springy Beans</h2>
+    <p>Springy Beans is an Active Vocabulary to manage the lifecycle of Java objects</p>
+    <p>The ubiquitous Spring IoC framework can be used to manage the lifecycle and configuration of Scorpio<sup>4</sup> application components</p>
+    <p>Spring can be used to contextually configure data access objects, user interfaces as well as to integrate other components and libraries into the Scorpio<sup>4</sup> runtime environment.</p>
+    <p>At runtime, the Java object graph is constructed by interpreting semantic data models. These models can be inferred and derived from existing domain knowledge.</p>
+
+    <h3>Bean Ontology</h3>
+    <p>Scorpio<sup>4</sup> implements the Bean Ontology to configure and register bean definitions. At runtime, these
+    definitions are resolved to construct the appropriate runtime Java environment as required.</p>
+    <p>The current integration is substantially functional, complex cases and more esoteric features are not yet supported.</p>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr><th>name</th><th>default</th><th>usage</th></tr>
+        </thead>
+        <tbody>
+        <tr><td>bean:new</td><td>N/A</td><td>Apply the list of arguments to the constructor.</td></tr>
+        <tr><td>bean:dependsOn</td><td>N/A</td><td>Apply the list of dependencies, usually inferred from the constructor.</td></tr>
+        <tr><td>bean:lazyInit</td><td>false</td><td>Initialise the Bean at registration (eager) or instantiation (lazy).</td></tr>
+        <tr><td>bean:initMethod</td><td>n/a</td><td>Specify the method to be called immediately after instantiation in order to initialize the component.</td></tr>
+        <tr><td>bean:destroyMethod</td><td>n/a</td><td>Specify the method to be called immediately before destruction in order to clean-up the component.</td></tr>
+        <tr><td>bean:lenient</td><td>false</td><td>TODO</td></tr>
+        <tr><td>bean:enforceInit</td><td>false</td><td>TODO</td></tr>
+        <tr><td>bean:enforceDestroy</td><td>false</td><td>TODO</td></tr>
+        <tr><td>bean:primary</td><td>true</td><td>TODO</td></tr>
+        <tr><td>bean:autoWire</td><td>true</td><td>TODO</td></tr>
+        <tr><td>bean:description</td><td>true</td><td>TODO</td></tr>
+        </tbody>
+    </table>
+
+</div>

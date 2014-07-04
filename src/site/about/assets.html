@@ -1,0 +1,26 @@
+<div>
+    <h2>Executable Assets</h2>
+    <p>Exec is an Active Vocabulary to manage the executable scripts, queries and templates.</p>
+    <p>Executable Assets can be triggered automatically or upon some event.</p>
+    <p>They are simply text-based files that are distinguished by their mime type, and fall into three broad categories:</p>
+
+    <h3>Scripts</h3>
+    <p>Scorpio<sup>4</sup> supports any Java Script Engine languages are the runtime environment supports, by default Javascript and Groovy.</p>
+    <p>How and when each script is run is described by consulting one or more of the Active Vocabularies.</p>
+    <p>Scripts can be run synchronously or asynchronously, depending upon the execution engine that is interpreting them.</p>
+
+    <h3>Queries</h3>
+    <p>Queries are instructions to create, read, update or delete data in some data source.
+        Scorpio<sup>4</sup> supports SQL and SPARQL queries. Other query engines are planned.</p>
+    <p>Queries can be expressed in their native form, or using the experimental ASQ language (Abstract Semantic Query) to generate them, particularly useful when inferred from annotated meta-data.</p>
+
+    <h3>Templates</h3>
+    <p>The rest of the Assets are simply text files that can be used as templates.</p>
+    <p>Templates can be used to publish generated output back into the knowledge base, or to export it through any API</p>
+    <p>Two template engines are available, a simple one supporting moustache-like {{xyz}} placeholders or the more powerful and expressive Groovy Template Engine.</p>
+    <ul>
+        <li>HTML, XHTML, XML</li>
+        <li>CSV, CSS, TXT</li>
+        <li>Many more ...</li>
+    </ul>
+</div>

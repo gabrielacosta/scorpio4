@@ -1,0 +1,55 @@
+<div>
+    <h2>Scorpio<sup>4</sup> - Maven</h2>
+    <p>The scorpio<sup>4</sup>maven plugin provides a suite of helpful tools for dealing with RDF-based technologies.</p>
+
+    <ul>
+        <li>
+            <a href="api.html"><h3>API</h3></a>
+            <p>Launches the scorpio<sup>4</sup>API sandbox. The API sandbox is a developer-runtime that is backed by a
+            Sesame Repository. The <a href="runtime.xhtml">API runtime</a> offers a variety of scripting, templating and data-flowing features.</p>
+        </li>
+        <li>
+            <a href="assets.html"><h3>Assets</h3></a>
+            <p>Scans the [scorpio.source] directory looking for supported text files, called Assets.
+                Scorpio<sup>4</sup> Assets includes SPARQL &amp; SQL queries, Groovy &amp; Javascript, XHTML &amp; HTML, CSV and XML file formats</p>
+
+        </li>
+        <li>
+            <a href="check.html"><h3>Check</h3></a>
+            <p>Checks the local Repository for errors using appropriately declared SPARQL Rules that conform to the FactCheck conventions.</p>
+        </li>
+        <li>
+            <a href="executor.html"><h3>Execute</h3></a>
+            <p>Executes the declared FactTool commands from the local Repository.</p>
+            <ul>
+                <li><a href="scripts.html">Scripting</a></li>
+                <li><a href="infer.html">Inferencing</a></li>
+                <li><a href="publish.html">Templating</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="publish.html"><h3>Publish</h3></a>
+            <p>Generate new Assets by rendering a template for each result of the associated query.
+            The resulting Assets are stored in the local Repository.</p>
+        </li>
+        <li>
+            <a href="infer.html"><h3>Infer</h3></a>
+            <p>Perform backward chained inferencing using appropriately declared SPARQL Rules.
+                The resulting Assets are stored in the local Repository.</p>
+        </li>
+        <li>
+            <a href="rdf.html">x<h3>RDF</h3></a>
+            <p>Loads the RDF files stored in the [scorpio.source] directory into the local Repository.
+                The local Repository is emptied before the operation begins.</p>
+        </li>
+        <li>
+            <h3>Dump</h3>
+            <p>Outputs the working repository into the [scorpio.temp] directory.</p>
+        </li>
+        <li>
+            <h3>Upload</h3>
+            <p>Uploads the contents of the working repository into a remote Sesame Repository or SPARQL endpoint.
+            </p>
+        </li>
+    </ul>
+</div>

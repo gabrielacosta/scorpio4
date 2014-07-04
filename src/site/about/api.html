@@ -1,0 +1,19 @@
+<div>
+    <h2>Scorpio<sup>4</sup> API</h2>
+    <p>Scorpio<sup>4</sup> constructs a dynamic API that presents itself over a variety of protocols. The most common, of course, is HTTP.</p>
+    <p>Scorpio<sup>4</sup> uses it's semantic model to govern access to your business rules - whether they are expressed in Java, a plethora of (JSR-223) scripting languages or the multitude of integration possibilities that Apache Camel offers.</p>
+    <p>The API is expressed as a processing pipeline, based on Apache Camel, that routes messages from place to place.</p>
+    <h3>Web API</h3>
+    <p>It is common to expose some part of your application as either an HTTP-based API, web app or site.</p>
+    <p>The first step is to declare that your application should listen for events from the web-service running on port 9999:</p>
+    <pre>
+        &lt;urn:Example:&gt;    camel:from  &lt;restlet:http://localhost:9999/hello&gt;;
+    </pre>
+    <p>Secondly, you need to build a processing pipeline that does something with the event:</p>
+    <pre>
+        &lt;restlet:http://localhost:9999/hello&gt;  camel:to    &lt;urn:Example.script.com.scorpio4.toolchain.exec.hello_world&gt;
+    </pre>
+    <p>The [restlet:] protocol creates a dynamic web service that accept requests on the URI and routes them to the com.scorpio4.toolchain.exec.hello_world script.</p>
+    <h3>Semantic API</h3>
+    <p>Each part of the pipeline is unique URI that can be linked to other meta-data.</p>
+</div>

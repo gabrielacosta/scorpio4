@@ -1,0 +1,34 @@
+<div>
+    <h2>Active Vocabularies</h2>
+    <p>An Active Vocabulary is a vocabulary of terms, usually active verbs that invoke runtime behaviour.</p>
+    <p>An Active Vocabulary can employ one or more Execution Strategies to activate it's classes and predicates.</p>
+    <p>An Execution Strategy operates at the intersection of RDF and traditional programming, leveraging existing tools, code and skills.</p>
+    <p>
+        Scorpio<sup>4</sup> programmers focus on concisely expressing their business logic, whilst taking
+        advantage of Scorpio<sup>4</sup>'s dynamic execution environment and contextual meta-data.</p>
+
+    <p>Scorpio<sup>4</sup> supports three default Execution Strategies:</p>
+
+
+
+    <h3>Executable Assets</h3>
+    <p>Scorpio<sup>4</sup>'s RDF-based Asset Register is the source of truth for your application scripts, queries and templates.</p>
+    <p>Supported assets include <a href="scripts.html">Javascript, Groovy, Python, Ruby</a>, SPARQL, SQL, XML, HTML, CSV and JSON.</p>
+    <p>An active predicate is an instance of an Executable <code>bean:</code> that can be supported by the runtime.</p>
+    <p>It is the Executable that determines which mime-types are supported. The predicate identifies a RDF literal with a supported mime-type.</p>
+
+    <h3>Springy Beans</h3>
+    <p>The <a href="spring.html">Springy Beans</a> ontology describes a Spring Registry, enabling Scorpio<sup>4</sup> to act as an executable source of truth for Spring-based components.</p>
+    <p>Any Java beans can be declared using the <code>bean:</code> scheme, for example <code>bean:com.example.HelloWorld</code></p>
+    <p>The <code>bean:</code> is an <code>rdf:type</code> of <code>bean:Bean</code></p>
+
+    <h3>Camel FLO</h3>
+    <p>Camel FLO is a source of truth for simple, powerful Enterprise Integration Patterns.</p>
+
+    <p>The predicates described by the <a href="camel.html">FLO</a> ontology closely mirror Camel's fluent API, with only a few tweaks to support the underlying RDF model.</p>
+    <p>These Active Predicates are used to model messages passing between two Camel endpoints (from the subject to the object).</p>
+    <p>It aims to be a faithful but not a perfect abstraction, never-the-less the FLO ontology is powerful enough to encompass all of the Enterprise Integration Patterns.</p>
+    <p>Camel FLO supports Springy Beans and Executable Assets are part of a pipeline.</p>
+
+
+</div>

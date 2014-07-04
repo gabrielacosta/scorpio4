@@ -1,0 +1,25 @@
+<div>
+    <h2> Inferencing</h2>
+
+    <p>Given this nugget of data, let's assume our vocabulary includes:</p>
+    <pre> :Black_Coffee rdfs:subClassOf     :Coffee.</pre>
+    <pre> :Coffee       rdfs:subClassOf     :Beverage.</pre>
+    <p>The rdfs:subClassOf relationship states that :Black_Coffee is also :Coffee and both are a :Beverage.</p>
+    <p>Now we can ask questions like what :Beverage does :Lee drink.</p>
+
+    <p>In RDFS, we describe the predicate (:drinks) as belonging to a domain and applying to a range:</p>
+    <pre> :drinks rdfs:domain :Drinker.</pre>
+    <pre> :drinks rdfs:range :Beverage.</pre>
+
+    <p>We have instructed the inferencing engine that the subject of :drinks is a :Drinker, and the object is :Beverage.</p>
+    <p>Based on our one data statement and these few RDFS rules in our vocabulary, we know that: </p>
+
+    <pre> :Lee          :drinks  :Black_Coffee.</pre>
+    <pre> :Lee          :drinks  :Coffee.</pre>
+    <pre> :Lee          :drinks  :Beverage.</pre>
+    <pre> :Lee          a        :Drinker.</pre>
+    <pre> :Coffee       a        :Beverage.</pre>
+    <pre> :Black_Coffee a        :Beverage.</pre>
+    <p>It's how humans think. But not our data, databases or software systems - until now. It's not magic, it's not proprietary and it's not experimental. It's live, robust and mature.</p>
+
+</div>

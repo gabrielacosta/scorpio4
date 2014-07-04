@@ -1,8 +1,14 @@
 <project>
 
+    <body>
+        <links>
+            <item name="${site.host.other.desc}" href="http://${site.host.other}" />
+        </links>
+    </body>
+
     <bannerLeft>
         <name>Scorpio4</name>
-        <src>http://www.scorpio4.com/images/logo.png</src>
+        <src>/images/logo.png</src>
         <href>http://www.scorpio4.com/</href>
     </bannerLeft>
 
@@ -18,10 +24,10 @@
 
     <poweredBy>
         <logo name="Maven" href="http://maven.apache.org/" img="http://maven.apache.org/images/logos/maven-feather.png"/>
-        <logo name="Scorpio4" href="http://www.Scorpio4.com/" img="http://www.Scorpio4.com/images/logo.png"/>
-        <logo name="OpenRDF Sesame" href="http://www.Scorpio4.com/" img="http://www.Scorpio4.com/images/logo.png"/>
-        <logo name="Spring" href="http://www.Scorpio4.com/" img="http://www.Scorpio4.com/images/logo.png"/>
-        <logo name="Apache Camel" href="http://www.Scorpio4.com/" img="http://www.Scorpio4.com/images/logo.png"/>
+        <logo name="Scorpio4" href="http://www.Scorpio4.com/" img="/images/logo.png"/>
+        <logo name="OpenRDF Sesame" href="http://www.Scorpio4.com/" img="/images/logo.png"/>
+        <logo name="Spring" href="http://www.Scorpio4.com/" img="/images/logo.png"/>
+        <logo name="Apache Camel" href="http://www.Scorpio4.com/" img="/images/logo.png"/>
     </poweredBy>
 
 </project>
