@@ -69,7 +69,6 @@
 
     <properties>
 
-        <gpg.passphrase>cuebic2011</gpg.passphrase>
 
         <scorpio4.id>urn:${project.artifactId}:</scorpio4.id>
         <scorpio4.src.path>src/main/resources/scorpio4/</scorpio4.src.path>
