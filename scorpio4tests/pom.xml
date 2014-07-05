@@ -41,11 +41,6 @@
         </license>
     </licenses>
 
-    <scm>
-        <url>github.com/scorpio4/scorpio4demo.git</url>
-        <connection>scm:git:https://github.com/scorpio4/scorpio4demo.git</connection>
-    </scm>
-
     <properties>
         <scorpio4.id>urn:${artifactId}:</scorpio4.id>
     </properties>
