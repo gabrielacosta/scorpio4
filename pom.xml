@@ -3,7 +3,7 @@
 
     <groupId>com.scorpio4</groupId>
     <artifactId>scorpio4</artifactId>
-    <version>0.05-SNAPSHOT</version>
+    <version>0.06-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -12,8 +12,10 @@
         <module>scorpio4dba</module>
         <!--<module>scorpio4devops</module>-->
         <module>scorpio4runtime</module>
+        <module>scorpio4curators</module>
         <module>scorpio4demo</module>
         <module>scorpio4website</module>
+        <module>scorpio4tests</module>
     </modules>
 
     <name>Scorpio4 Master</name>

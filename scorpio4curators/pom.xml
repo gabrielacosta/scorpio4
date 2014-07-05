@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>com.scorpio4</groupId>
@@ -9,10 +8,11 @@
         <relativePath>../</relativePath>
     </parent>
 
-    <artifactId>scorpio4tests</artifactId>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>scorpio4curators</artifactId>
     <packaging>jar</packaging>
 
-    <name>Scorpio4 Test Suite</name>
+    <name>Scorpio4 Curators</name>
     <url>http://www.scorpio4.com</url>
 
     <organization>
@@ -41,12 +41,21 @@
         </license>
     </licenses>
 
+    <scm>
+        <url>github.com/scorpio4/scorpio4rdf.git</url>
+        <connection>scm:git:https://github.com/scorpio4/scorpio4rdf.git</connection>
+    </scm>
+
     <properties>
-        <scorpio4.id>urn:${artifactId}:</scorpio4.id>
     </properties>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-maven-plugin</artifactId>
+                <version>${camel.version}</version>
+            </plugin>
             <!--Groovy Eclipse compiler plugin compiles both .groovy and .java sources-->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -99,23 +108,25 @@
                 <!--</executions>-->
             <!--</plugin>-->
         </plugins>
+
+
     </build>
+    <repositories>
+        <repository>
+            <id>maven-restlet-clone</id>
+            <name>Maven Restlet</name>
+            <url>http://repo1.maven.org/maven2/</url>
+        </repository>
+    </repositories>
 
     <!-- Project dependencies -->
     <dependencies>
 
         <dependency>
-            <groupId>org.apache.maven</groupId>
-            <artifactId>maven-project</artifactId>
-            <version>2.1.0</version>
-        </dependency>
-
-        <dependency>
             <groupId>com.scorpio4</groupId>
-            <artifactId>scorpio4demo</artifactId>
+            <artifactId>scorpio4runtime</artifactId>
             <version>${project.version}</version>
         </dependency>
-
 
     </dependencies>
 
