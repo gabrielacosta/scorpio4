@@ -16,7 +16,6 @@ package com.scorpio4.util.io;
  *   TO REPRODUCE, DISCLOSE OR DISTRIBUTE ITS CONTENTS, OR TO MANUFACTURE, USE, OR SELL ANYTHING THAT IT  MAY DESCRIBE, IN WHOLE OR IN PART.
  *
  */
-import com.scorpio4.oops.FactException;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -62,7 +61,7 @@ public class JarArchiver {
         manifest.getMainAttributes().put(new Attributes.Name(name),value);
     }
 
-	public String add(InputStream inputStream, String filename, String comment, long size) throws IOException, NoSuchAlgorithmException, FactException {
+	public String add(InputStream inputStream, String filename, String comment, long size) throws IOException, NoSuchAlgorithmException {
         if (jarOutputStream==null) throw new IOException("not open");
 		JarEntry entry = new JarEntry(filename);
 		entry.setSize(size);

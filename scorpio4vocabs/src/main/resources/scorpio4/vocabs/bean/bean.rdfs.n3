@@ -1,0 +1,145 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix scorpio4: 	<http://scorpio4.com/vocab/v1/>.
+@prefix bean: 		<http://scorpio4.com/vocab/v1/bean/>.
+@prefix : 		    <http://scorpio4.com/vocab/v1/bean/>.
+
+:	a					owl:Ontology;
+	owl:versionInfo		"0.1";
+	rdfs:label			"Springy Beans";
+	dc:title			"Springy Beans";
+	rdfs:comment		"Active Vocabulary for describing a Spring Registry.";
+	dc:created			"2013-03-01"^^xsd:date;
+	dc:modified			"2013-03-01"^^xsd:date;
+	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>;
+.
+
+:Bean
+	a					rdfs:Class;
+	rdfs:label			"Bean";
+	rdfs:comment 		"A Springy Java Bean";
+	rdfs:isDefinedBy	:;
+.
+
+:new
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"bean constructor";
+	rdfs:comment        "Arguments to construct a bean";
+	rdfs:domain			:Bean;
+	rdfs:range  		rdfs:List;
+.
+:dependsOn
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"dependsOn";
+	rdfs:comment        "Explicit bean dependencies";
+	rdfs:domain			:Bean;
+	rdfs:range  		rdfs:List;
+.
+
+:lazyInit
+	a					owl:DatatypeProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"lazy init";
+	rdfs:comment        "Lazy Initialization";
+	rdfs:domain			:Bean;
+	rdfs:range  		xsd:boolean;
+.
+
+:initMethod
+	a					owl:DatatypeProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"initMethod";
+	rdfs:comment        "init Method";
+	rdfs:domain			:Bean;
+	rdfs:range  		xsd:string;
+.
+
+:destroyMethod
+	a					owl:DatatypeProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"destroyMethod";
+	rdfs:comment        "Destroy Method";
+	rdfs:domain			:Bean;
+	rdfs:range  		xsd:string;
+.
+
+:lenient
+	a					owl:DatatypeProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"lenient";
+	rdfs:comment        "lenient";
+	rdfs:domain			:Bean;
+	rdfs:range  		xsd:boolean;
+.
+
+:lenient
+	a					owl:DatatypeProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"lenient";
+	rdfs:comment        "lenient";
+	rdfs:domain			:Bean;
+	rdfs:range  		xsd:boolean;
+.
+
+:enforceInit
+	a					owl:DatatypeProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"enforceInit";
+	rdfs:comment        "enforce Init";
+	rdfs:domain			:Bean;
+	rdfs:range  		xsd:boolean;
+.
+
+:enforceDestroy
+	a					owl:DatatypeProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"enforceDestroy";
+	rdfs:comment        "Enforce Destroy";
+	rdfs:domain			:Bean;
+	rdfs:range  		xsd:boolean;
+.
+
+:primary
+	a					owl:DatatypeProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"primary";
+	rdfs:comment        "primary";
+	rdfs:domain			:Bean;
+	rdfs:range  		xsd:boolean;
+.
+
+:autoWire
+	a					owl:DatatypeProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"autoWire";
+	rdfs:comment        "autoWire";
+	rdfs:domain			:Bean;
+	rdfs:range  		xsd:boolean;
+.
+
+
+:singleton
+	a					owl:DatatypeProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"singleton";
+	rdfs:comment        "singleton";
+	rdfs:domain			:Bean;
+	rdfs:range  		xsd:boolean;
+.
+
+
+:description
+	a					owl:DatatypeProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"description";
+	rdfs:comment        "description";
+	rdfs:domain			:Bean;
+	rdfs:range  		xsd:string;
+.

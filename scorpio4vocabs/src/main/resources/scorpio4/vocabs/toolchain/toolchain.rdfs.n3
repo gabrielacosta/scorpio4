@@ -1,0 +1,60 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix iq: 		<http://scorpio4.com/vocab/v1/iq/>.
+@prefix toolchain: 	<http://scorpio4.com/vocab/v1/toolchain/>.
+@prefix : 		    <http://scorpio4.com/vocab/v1/toolchain/>.
+
+:	a					owl:Ontology;
+	owl:versionInfo		"0.1";
+	rdfs:label			"ToolChain";
+	dc:title			"ToolChain vocabulary";
+	rdfs:comment		"Vocabulary for describing ToolChain.";
+	dc:created			"2013-03-01"^^xsd:date;
+	dc:modified			"2013-03-01"^^xsd:date;
+	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>;
+.
+
+:Fatal
+	a					rdfs:Class;
+	rdfs:label			"Fatal";
+	rdfs:comment 		"A Fatal FactCheck Failure";
+	rdfs:isDefinedBy	:;
+.
+
+
+:FactCheck
+	a					rdfs:Class;
+	rdfs:label			"FactCheck";
+	rdfs:comment 		"A FactCheck Construct";
+	rdfs:isDefinedBy	:;
+	rdfs:subClassOf     <bean:com.scorpio4.iq.exec.Inferring>;
+.
+
+:Template
+	a					rdfs:Class;
+	rdfs:label			"Template";
+	rdfs:comment 		"A Template File";
+	rdfs:isDefinedBy	:;
+	rdfs:subClassOf     <bean:com.scorpio4.iq.exec.Templating>;
+.
+
+:Script
+	a					rdfs:Class;
+	rdfs:label			"Script";
+	rdfs:comment 		"A JSR223 Script";
+	rdfs:isDefinedBy	:;
+	rdfs:subClassOf     <bean:com.scorpio4.iq.exec.Scripting>;
+.
+
+:Infer
+	a					rdfs:Class;
+	rdfs:label			"Infer";
+	rdfs:comment 		"An Inference Script";
+	rdfs:isDefinedBy	:;
+	rdfs:subClassOf     <bean:com.scorpio4.iq.exec.Inferring>;
+.

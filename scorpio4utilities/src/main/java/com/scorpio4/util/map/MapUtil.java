@@ -17,9 +17,6 @@ package com.scorpio4.util.map;
  *
  */
 import com.scorpio4.util.DateXSD;
-import org.limewire.collection.CharSequenceKeyAnalyzer;
-import org.limewire.collection.PatriciaTrie;
-import org.limewire.collection.Trie;
 
 import java.io.File;
 import java.util.*;
@@ -87,17 +84,17 @@ public class MapUtil {
 		return list;
 	}
 
-    public static Trie<String,Map> getTrieByKey(Collection <Map<String,Object>> things) {
-        return getTrieByKey(things, "this");
-    }
-
-    public static Trie<String,Map> getTrieByKey(Collection <Map<String,Object>> things, String key) {
-        Trie models = new PatriciaTrie<String,Object>(new CharSequenceKeyAnalyzer());
-        for(Map thing: things) {
-            models.put(thing.get(key), thing);
-        }
-        return models;
-    }
+//    public static Trie<String,Map> getTrieByKey(Collection <Map<String,Object>> things) {
+//        return getTrieByKey(things, "this");
+//    }
+//
+//    public static Trie<String,Map> getTrieByKey(Collection <Map<String,Object>> things, String key) {
+//        Trie models = new PatriciaTrie<String,Object>(new CharSequenceKeyAnalyzer());
+//        for(Map thing: things) {
+//            models.put(thing.get(key), thing);
+//        }
+//        return models;
+//    }
 
     public static Map<String,Map> getMapByKey(Collection <Map<String,Object>> things) {
         return getMapByKey(things, "this");

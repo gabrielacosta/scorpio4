@@ -1,0 +1,72 @@
+@prefix rdf:		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:		<http://www.w3.org/2002/07/owl#> .
+@prefix dc:			<http://purl.org/dc/elements/1.1/> .
+@prefix eg:			<http://www.example.org/> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+
+@prefix camel: 		<http://scorpio4.com/vocab/v1/camel/>.
+@prefix : 		    <http://scorpio4.com/vocab/v1/camel/>.
+
+:from
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"from";
+	rdfs:domain			:Route;
+	rdfs:range  		:Endpoint;
+.
+
+:to
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"from";
+	rdfs:domain			:Processor;
+	rdfs:range  		:Processor;
+.
+
+:bean
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"bean";
+	rdfs:domain			:Processor;
+	rdfs:range  		:Bean;
+.
+
+:group
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"group";
+	rdfs:domain			:Processor;
+	rdfs:range  		:Processor;
+.
+
+:choice
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"choice";
+	rdfs:domain			:Processor;
+#	rdfs:range  		:Processor;
+.
+
+:when
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"when";
+	rdfs:domain			:Processor;
+	rdfs:range  		:Predicate;
+.
+
+:otherwise
+	a					owl:ObjectProperty;
+	rdfs:isDefinedBy	:;
+	rdfs:label 			"otherwise";
+	rdfs:domain			:Processor;
+#	rdfs:range  		:Predicate;
+.
+
+
+
+
+
+
+
