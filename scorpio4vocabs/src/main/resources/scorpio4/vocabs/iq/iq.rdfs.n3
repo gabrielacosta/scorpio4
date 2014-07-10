@@ -4,6 +4,7 @@
 @prefix dc:			<http://purl.org/dc/elements/1.1/> .
 @prefix eg:			<http://www.example.org/> .
 @prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+@prefix vann: <http://purl.org/vocab/vann/>.
 
 @prefix iq: 		<http://scorpio4.com/vocab/v1/iq/>.
 @prefix : 		    <http://scorpio4.com/vocab/v1/iq/>.
@@ -16,6 +17,7 @@
 	dc:created			"2013-03-01"^^xsd:date;
 	dc:modified			"2013-03-01"^^xsd:date;
 	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>;
+	vann:preferredNamespacePrefix "iq" ;
 .
 
 :Executable

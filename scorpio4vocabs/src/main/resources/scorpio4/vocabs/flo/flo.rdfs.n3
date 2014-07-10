@@ -4,18 +4,37 @@
 @prefix dc:			<http://purl.org/dc/elements/1.1/> .
 @prefix eg:			<http://www.example.org/> .
 @prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
+@prefix vann: <http://purl.org/vocab/vann/>.
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 
-@prefix camel: 		<http://scorpio4.com/vocab/v1/camel/>.
-@prefix : 		    <http://scorpio4.com/vocab/v1/camel/>.
+@prefix flo: 		<http://scorpio4.com/vocab/v1/flo/>.
+@prefix : 		    <http://scorpio4.com/vocab/v1/flo/>.
 
 :	a					owl:Ontology;
 	owl:versionInfo		"0.1";
-	rdfs:label			"Camel";
-	dc:title			"Camel vocabulary";
-	rdfs:comment		"Vocabulary for describing Apache Camel";
+	rdfs:label			"FLO";
+	dc:title			"FLO Vocabulary";
+	rdfs:comment		"FLO Vocabulary for working with Apache Camel";
 	dc:created			"2013-03-01"^^xsd:date;
 	dc:modified			"2013-03-01"^^xsd:date;
 	dc:license 			<http://www.opendatacommons.org/licenses/pddl/1.0/>;
+	vann:preferredNamespacePrefix "flo" ;
+.
+
+:Producer
+	a					rdfs:Class;
+	rdfs:label			"Producer";
+	rdfs:comment 		"An Apache Camel Producer";
+	rdfs:isDefinedBy	:;
+	vs:term_status 		"testing";
+.
+
+:Consumer
+	a					rdfs:Class;
+	rdfs:label			"Consumer";
+	rdfs:comment 		"An Apache Camel Consumer";
+	rdfs:isDefinedBy	:;
+	vs:term_status 		"testing";
 .
 
 :Processor
@@ -23,14 +42,15 @@
 	rdfs:label			"Processor";
 	rdfs:comment 		"An Apache Camel Processor";
 	rdfs:isDefinedBy	:;
+	vs:term_status 		"testing";
 .
-
 :Endpoint
 	a					rdfs:Class;
 	rdfs:subClassOf		:Processor;
 	rdfs:label			"Endpoint";
 	rdfs:comment 		"An Apache Camel Endpoint";
 	rdfs:isDefinedBy	:;
+	vs:term_status 		"testing";
 .
 
 :Bean
@@ -39,6 +59,7 @@
 	rdfs:label			"Bean";
 	rdfs:comment 		"An Apache Camel Bean";
 	rdfs:isDefinedBy	:;
+	vs:term_status 		"testing";
 .
 
 :Route
@@ -46,6 +67,7 @@
 	rdfs:label			"Route";
 	rdfs:comment 		"An Apache Camel Route";
 	rdfs:isDefinedBy	:;
+	vs:term_status 		"testing";
 .
 
 :Group
@@ -53,6 +75,7 @@
 	rdfs:label			"Group";
 	rdfs:comment 		"An Apache Camel Group";
 	rdfs:isDefinedBy	:;
+	vs:term_status 		"testing";
 .
 
 :Predicate
@@ -61,6 +84,7 @@
 	rdfs:comment 		"An Apache Camel Predicate";
 	camel:docs 			"Evaluates a binary predicate on the message exchange to support things like scripting languages, XQuery or SQL as well as any arbitrary Java expression.";
 	rdfs:isDefinedBy	:;
+	vs:term_status 		"testing";
 .
 
 :belongsTo
@@ -69,6 +93,7 @@
 	rdfs:label 			"belongs to";
 	rdfs:domain			:Route;
 	rdfs:range  		:Group;
+	vs:term_status 		"testing";
 .
 
 :docs

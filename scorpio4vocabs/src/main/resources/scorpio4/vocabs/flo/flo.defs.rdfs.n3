@@ -5,8 +5,8 @@
 @prefix eg:			<http://www.example.org/> .
 @prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
 
-@prefix camel: 		<http://scorpio4.com/vocab/v1/camel/>.
-@prefix : 		    <http://scorpio4.com/vocab/v1/camel/>.
+@prefix flo: 		<http://scorpio4.com/vocab/v1/flo/>.
+@prefix : 		    <http://scorpio4.com/vocab/v1/flo/>.
 
 :from
 	a					owl:ObjectProperty;
