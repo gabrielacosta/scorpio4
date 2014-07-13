@@ -9,15 +9,16 @@
 
     <groupId>com.scorpio4</groupId>
     <artifactId>scorpio4</artifactId>
-    <version>0.06-SNAPSHOT</version>
+    <version>0.08-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
         <module>scorpio4core</module>
-        <module>scorpio4rdf</module>
-        <module>scorpio4dba</module>
+        <module>scorpio4utilities</module>
+        <module>scorpio4vocabs</module>
         <!--<module>scorpio4devops</module>-->
         <module>scorpio4runtime</module>
+        <module>scorpio4maven</module>
         <module>scorpio4curators</module>
         <module>scorpio4demo</module>
         <module>scorpio4website</module>
@@ -78,15 +79,6 @@
 
     <properties>
 
-
-        <scorpio4.id>urn:${project.artifactId}:</scorpio4.id>
-        <scorpio4.src.path>src/main/resources/scorpio4/</scorpio4.src.path>
-        <scorpio4.resources.path>src/main/resources/scorpio4/</scorpio4.resources.path>
-        <scorpio4.target.path>build/target/</scorpio4.target.path>
-        <scorpio4.temp.path>build/scorpio4/</scorpio4.temp.path>
-        <scorpio4.upload.host>http://127.0.0.1:8080/openrdf-sesame/</scorpio4.upload.host>
-        <scorpio4.upload.name>scorpio4</scorpio4.upload.name>
-
         <site.host.stable>${project.url}</site.host.stable>
         <site.host.stable.desc>PARENT-STABLE</site.host.stable.desc>
         <site.host.dev>http://localhost:9000/</site.host.dev>
@@ -98,6 +90,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.directory>deploy</project.build.directory>
         <project.webapp.directory>src/main/resources/www/</project.webapp.directory>
+
+        <main.class>com.scorpio4.runtime.Personal</main.class>
 
         <!-- dependency versions -->
         <winstone.version>1.0.4</winstone.version>
@@ -180,6 +174,7 @@
                     <artifactId>maven-release-plugin</artifactId>
                     <version>2.5</version>
                     <configuration>
+                        <stagingRepository>https://oss.sonatype.org/service/local/staging/deploy/maven2</stagingRepository>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -240,6 +235,150 @@
                         </execution>
                     </executions>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>2.1</version>
+                    <executions>
+                        <execution>
+                            <id>copy-dependencies</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>copy-dependencies</goal>
+                            </goals>
+                            <configuration>
+                                <outputDirectory>${project.build.directory}</outputDirectory>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>buildnumber-maven-plugin</artifactId>
+                    <version>1.1</version>
+                    <executions>
+                        <execution>
+                            <phase>validate</phase>
+                            <goals>
+                                <goal>create</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <doCheck>false</doCheck>
+                        <doUpdate>false</doUpdate>
+                        <buildNumberPropertiesFileLocation>${basedir}/build.version.properties</buildNumberPropertiesFileLocation>
+                        <revisionOnScmFailure>localBuild</revisionOnScmFailure>
+                        <shortRevisionLength>5</shortRevisionLength>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.4</version>
+                    <configuration>
+                        <excludes>
+                            <exclude>**/logback-test.xml</exclude>
+                        </excludes>
+                        <archive>
+                            <manifest>
+                                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                                <addClasspath>true</addClasspath>
+                                <useUniqueVersions>false</useUniqueVersions>
+                                <!--
+                                             <classpathLayoutType>custom</classpathLayoutType>
+                                             <customClasspathLayout>$${artifact.artifactId}-$${artifact.baseVersion}.$${artifact.extension}</customClasspathLayout>
+                 -->
+                                <mainClass>${main.class}</mainClass>
+                            </manifest>
+                            <manifestEntries>
+                                <Implementation-Build>$\{buildNumber}</Implementation-Build>
+                            </manifestEntries>
+                        </archive>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>webstart-maven-plugin</artifactId>
+                    <version>1.0-beta-3</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>jnlp</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <!--outputDirectory></outputDirectory--> <!-- not required?? -->
+
+                        <!--
+                        Set to true to exclude all transitive dependencies. Default is false.
+                        -->
+                        <excludeTransitive>false</excludeTransitive>
+
+                        <!-- The path where the libraries are stored within the jnlp structure. not required. by default the libraries are within the working directory -->
+                        <!--
+                                            <libPath></libPath>
+                        -->
+                        <!-- [optional] transitive dependencies filter - if omitted, all transitive dependencies are included -->
+                        <!--
+                                            <dependencies>
+                                            <includes>
+                                                <include>commons-logging:commons-logging</include>
+                                                <include>commons-cli:commons-cli</include>
+                                            </includes>
+                                        </dependencies>
+
+
+                                        -->
+                        <resourcesDirectory>${project.basedir}/src/main/jnlp/resources</resourcesDirectory>
+
+                        <!-- JNLP generation -->
+                        <jnlp>
+                            <!--inputTemplateResourcePath>${project.basedir}</inputTemplateResourcePath-->
+                            <!--inputTemplate>src/main/jnlp/template.vm</inputTemplate--> <!-- relative to inputTemplateResourcePath -->
+                            <outputFile>factcore.jnlp</outputFile>
+                            <mainClass>com.factcore.run.WebStart</mainClass>
+                        </jnlp>
+
+
+                        <!-- SIGNING -->
+                        <sign>
+                            <keystore>../../factcore-webstart.keys</keystore>
+                            <keypass>factcore:lee:gia:bree</keypass>
+                            <storepass>factcore:lee:gia:bree</storepass>
+                            <alias>factcore</alias>
+                            <verify>true</verify>
+                        </sign>
+
+                        <!-- BUILDING PROCESS -->
+
+                        <pack200>true</pack200>
+                        <gzip>true</gzip>
+
+                        <outputJarVersions>false</outputJarVersions>
+                        <verbose>true</verbose>
+
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>gwt-maven-plugin</artifactId>
+                    <version>2.4.0</version>
+                    <configuration>
+                        <webappDirectory>${project.webapp.directory}/VAADIN/widgetsets</webappDirectory>
+                        <extraJvmArgs>-Xmx2048M -Xss1024k</extraJvmArgs>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>resources</goal>
+                                <goal>compile</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
             </plugins>
         </pluginManagement>
 
@@ -252,11 +391,6 @@
             <extension>
                 <groupId>org.apache.maven.scm</groupId>
                 <artifactId>maven-scm-manager-plexus</artifactId>
-                <version>1.9</version>
-            </extension>
-            <extension>
-                <groupId>org.apache.maven.scm</groupId>
-                <artifactId>maven-scm-provider-gitexe</artifactId>
                 <version>1.9</version>
             </extension>
         </extensions>
