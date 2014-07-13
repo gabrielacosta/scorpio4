@@ -11,8 +11,8 @@
 
 :	a					owl:Ontology;
 	owl:versionInfo		"0.1";
-	rdfs:label			"Springy Beans";
-	dc:title			"Springy Beans";
+	rdfs:label			"Active Beans";
+	dc:title			"Active Beans";
 	rdfs:comment		"Active Vocabulary for describing a Spring Registry.";
 	dc:created			"2013-03-01"^^xsd:date;
 	dc:modified			"2013-03-01"^^xsd:date;
