@@ -9,7 +9,7 @@
 
     <groupId>com.scorpio4</groupId>
     <artifactId>scorpio4</artifactId>
-    <version>0.08-SNAPSHOT</version>
+    <version>0.09-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
