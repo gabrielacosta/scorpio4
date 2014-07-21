@@ -6,7 +6,7 @@ import java.io.Reader;
 /**
  * Scorpio4 (c) 2013
  * Module: com.scorpio4.util.io
- * User  : lee
+ * @author lee
  * Date  : 25/03/2014
  * Time  : 3:17 AM
  */

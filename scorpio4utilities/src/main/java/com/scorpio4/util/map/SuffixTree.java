@@ -3,7 +3,7 @@ package com.scorpio4.util.map;
 /**
  * Scorpio4 (c) 2013
  * Module: com.scorpio4.util.map
- * User  : lee
+ * @author lee
  * Date  : 12/03/2014
  * Time  : 6:53 PM
  */

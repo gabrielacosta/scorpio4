@@ -6,8 +6,8 @@
 @prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
 @prefix vann: <http://purl.org/vocab/vann/>.
 
-@prefix iq: 		<http://scorpio4.com/vocab/v1/iq/>.
-@prefix : 		    <http://scorpio4.com/vocab/v1/iq/>.
+@prefix iq: 		<http://scorpio4.com/v1/vocab/iq/>.
+@prefix : 		    <http://scorpio4.com/v1/vocab/iq/>.
 
 :	a					owl:Ontology;
 	owl:versionInfo		"0.1";

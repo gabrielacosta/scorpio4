@@ -26,7 +26,7 @@ import java.util.Properties;
 /**
  * scorpio4 (c) 2013
  * Module: com.scorpio4.security.keysafe
- * User  : lee
+ * @author lee
  * Date  : 3/11/2013
  * Time  : 12:21 PM
  *

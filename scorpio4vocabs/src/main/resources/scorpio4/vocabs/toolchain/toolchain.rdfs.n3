@@ -5,9 +5,9 @@
 @prefix eg:			<http://www.example.org/> .
 @prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
 
-@prefix iq: 		<http://scorpio4.com/vocab/v1/iq/>.
-@prefix toolchain: 	<http://scorpio4.com/vocab/v1/toolchain/>.
-@prefix : 		    <http://scorpio4.com/vocab/v1/toolchain/>.
+@prefix iq: 		<http://scorpio4.com/v1/vocab/iq/>.
+@prefix toolchain: 	<http://scorpio4.com/v1/vocab/toolchain/>.
+@prefix : 		    <http://scorpio4.com/v1/vocab/toolchain/>.
 
 :	a					owl:Ontology;
 	owl:versionInfo		"0.1";

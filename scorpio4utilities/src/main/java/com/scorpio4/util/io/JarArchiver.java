@@ -22,7 +22,7 @@ import java.util.jar.Manifest;
 /**
  * ProjectArchiver (c) 2013
  * Module: com.projectArchiver.io
- * User  : lee
+ * @author lee
  * Date  : 14/01/2014
  * Time  : 12:57 AM
  */

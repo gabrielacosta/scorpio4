@@ -6,7 +6,7 @@ import java.io.InputStream;
 /**
  * scorpio4-oss (c) 2014
  * Module: com.scorpio4.util.io
- * User  : lee
+ * @author lee
  * Date  : 5/07/2014
  * Time  : 4:49 PM
  */

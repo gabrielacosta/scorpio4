@@ -5,9 +5,9 @@
 @prefix eg:			<http://www.example.org/> .
 @prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
 
-@prefix iq: 		<http://scorpio4.com/vocab/v1/iq/>.
-@prefix core: 		<http://scorpio4.com/vocab/v1/>.
-@prefix : 		    <http://scorpio4.com/vocab/v1/>.
+@prefix iq: 		<http://scorpio4.com/v1/vocab/iq/>.
+@prefix core: 		<http://scorpio4.com/v1/vocab/>.
+@prefix : 		    <http://scorpio4.com/v1/vocab/>.
 
 :	a					owl:Ontology;
 	owl:versionInfo		"0.1";
@@ -33,8 +33,7 @@
 	rdfs:isDefinedBy	:;
 .
 
-:ActiveVocabulary
-	rdfs:subClassOf		:Feature;
+:Active
 	rdfs:subClassOf		owl:Ontology;
 	rdfs:label			"Active Vocabulary";
 	rdfs:comment 		"A Scorpio4 Active Vocabulary";
@@ -54,13 +53,5 @@
 	rdfs:label 			"has asset";
 	rdfs:domain			:Asset;
 	rdfs:range  		xsd:string;
-.
-
-:implements
-	a					rdf:Property;
-	rdfs:isDefinedBy	:;
-	rdfs:label 			"implements";
-	rdfs:domain			:Engine;
-	rdfs:range  		:Feature;
 .
 

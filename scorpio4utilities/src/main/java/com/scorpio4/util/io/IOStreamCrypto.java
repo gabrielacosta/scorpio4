@@ -21,7 +21,7 @@ import java.security.NoSuchAlgorithmException;
 /**
  * Scorpio4 (c) 2013
  * Module: com.scorpio4.util.io
- * User  : lee
+ * @author lee
  * Date  : 10/01/2014
  * Time  : 2:54 PM
  */

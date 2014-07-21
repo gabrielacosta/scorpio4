@@ -7,8 +7,8 @@
 @prefix vann: <http://purl.org/vocab/vann/>.
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 
-@prefix flo: 		<http://scorpio4.com/vocab/v1/flo/>.
-@prefix : 		    <http://scorpio4.com/vocab/v1/flo/>.
+@prefix flo: 		<http://scorpio4.com/v1/vocab/flo/>.
+@prefix : 		    <http://scorpio4.com/v1/vocab/flo/>.
 
 :	a					owl:Ontology;
 	owl:versionInfo		"0.1";

@@ -8,18 +8,17 @@ package com.scorpio4.util.keysafe;
 /**
  * scorpio4 (c) 2013
  * Module: com.scorpio4.security.keysafe
- * User  : lee
+ * @author lee
  * Date  : 5/11/2013
  * Time  : 12:32 PM
  */
 public class KeySafeException extends Exception {
-    String msg = null;
 
     public KeySafeException(String msg) {
-        this.msg = msg;
+	    super(msg);
     }
 
     public KeySafeException(String msg, Exception e) {
-        this.msg = msg;
+	    super(msg,e);
     }
 }
