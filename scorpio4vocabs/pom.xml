@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.scorpio4</groupId>
         <artifactId>scorpio4</artifactId>
-        <version>0.09-SNAPSHOT</version>
+        <version>0.10-SNAPSHOT</version>
         <relativePath>../</relativePath>
     </parent>
 
