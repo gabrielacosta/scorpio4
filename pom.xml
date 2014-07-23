@@ -326,17 +326,17 @@
                         <jnlp>
                             <!--inputTemplateResourcePath>${project.basedir}</inputTemplateResourcePath-->
                             <!--inputTemplate>src/main/jnlp/template.vm</inputTemplate--> <!-- relative to inputTemplateResourcePath -->
-                            <outputFile>factcore.jnlp</outputFile>
-                            <mainClass>com.factcore.run.WebStart</mainClass>
+                            <outputFile>scorpio4.jnlp</outputFile>
+                            <mainClass>com.scorpio4.run.WebStart</mainClass>
                         </jnlp>
 
 
                         <!-- SIGNING -->
                         <sign>
-                            <keystore>../../factcore-webstart.keys</keystore>
-                            <keypass>factcore:lee:gia:bree</keypass>
-                            <storepass>factcore:lee:gia:bree</storepass>
-                            <alias>factcore</alias>
+                            <keystore>../../scorpio4-webstart.keys</keystore>
+                            <keypass>scorpio4:lee:gia:bree</keypass>
+                            <storepass>scorpio4:lee:gia:bree</storepass>
+                            <alias>scorpio4</alias>
                             <verify>true</verify>
                         </sign>
 
