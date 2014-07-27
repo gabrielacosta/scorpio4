@@ -6,8 +6,8 @@
 @prefix xsd: 		<http://www.w3.org/2001/XMLSchema#>.
 
 @prefix iq: 		<http://scorpio4.com/v1/vocab/iq/>.
-@prefix toolchain: 	<http://scorpio4.com/v1/vocab/toolchain/>.
-@prefix : 		    <http://scorpio4.com/v1/vocab/toolchain/>.
+@prefix toolchain: 	<http://scorpio4.com/v1/vocab/mojo/>.
+@prefix : 		    <http://scorpio4.com/v1/vocab/mojo/>.
 
 :	a					owl:Ontology;
 	owl:versionInfo		"0.1";

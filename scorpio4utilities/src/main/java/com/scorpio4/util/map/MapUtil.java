@@ -114,4 +114,15 @@ public class MapUtil {
         }
         return config;
     }
+
+	public static Map getConfig(Map props, String prefix) {
+		HashMap config = new HashMap();
+		for(Object name: props.keySet()) {
+			if (name.toString().startsWith(prefix)) {
+				String shortName = name.toString().substring(prefix.length());
+				config.put(shortName, props.get(name));
+			}
+		}
+		return config;
+	}
 }
