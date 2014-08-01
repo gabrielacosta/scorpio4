@@ -22,6 +22,7 @@
         <module>scorpio4runtime</module>
         <module>scorpio4maven</module>
         <module>scorpio4curators</module>
+        <module>scorpio4users</module>
         <module>scorpio4demo</module>
         <module>scorpio4website</module>
         <module>scorpio4tests</module>
