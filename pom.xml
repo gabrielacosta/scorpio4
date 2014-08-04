@@ -18,10 +18,10 @@
         <module>scorpio4core</module>
         <module>scorpio4utilities</module>
         <module>scorpio4vocabs</module>
-        <!--<module>scorpio4devops</module>-->
         <module>scorpio4runtime</module>
         <module>scorpio4maven</module>
         <module>scorpio4curators</module>
+        <module>scorpio4devops</module>
         <module>scorpio4users</module>
         <module>scorpio4demo</module>
         <module>scorpio4website</module>
